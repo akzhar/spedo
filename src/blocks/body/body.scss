@@ -1,0 +1,26 @@
+.body {
+  font-family: "Georgia", Times New Roman, serif;
+  font-size: $s_1;
+  line-height: $l_1;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+
+.body--index .nav-list__link--index { // для активного пункта меню
+  pointer-events: none !important; //отключаем событие клика
+  cursor: default !important; //курсор обычный при наведении
+  font-weight: bold !important;
+}
+
+@media (min-width: $width-tablet) {
+  .body {
+
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .body {
+
+  }
+}

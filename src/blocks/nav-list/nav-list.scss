@@ -1,0 +1,25 @@
+.nav-list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav-list__item {
+  margin-right: 50px;
+}
+
+.nav-list__link {
+  text-decoration: none;
+  color: #000000;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
