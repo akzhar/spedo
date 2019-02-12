@@ -137,16 +137,20 @@ gulp.task("html", function () { // задача - вызывается как с
 });
 
 gulp.task("watch", function() { // задача - вызывается как скрипт из package.json
-  gulp.watch("docs/**/*.*", server.reload); // отслеживание изменений файлов scss
+  // gulp.watch("docs/**/*.*", server.reload); // отслеживание изменений файлов scss
 
-  gulp.watch("src/blocks/**/*.{scss,sass}", ["style"]); // отслеживание изменений файлов scss
+  gulp.watch("src/blocks/**/*.{scss,sass}", ["style", "reload"]); // отслеживание изменений файлов scss
 
-  gulp.watch("src/js/**/*.js", ["js"]); // отслеживание изменений файлов js
+  gulp.watch("src/js/**/*.js", ["js" , "reload"]); // отслеживание изменений файлов js
 
-  gulp.watch("src/blocks/**/*.html", ["html"]); // отслеживание изменений файлов html
+  gulp.watch("src/blocks/**/*.html", ["html", "reload"]); // отслеживание изменений файлов html
 
-  gulp.watch("src/img/*.*", ["image"]); // отслеживание изменений файлов img
-  gulp.watch("src/img/sprite/inline-*.svg", ["sprite", "html"]); // отслеживание изменений файлов sprite svg
+  gulp.watch("src/img/*.*", ["image", "reload"]); // отслеживание изменений файлов img
+  gulp.watch("src/img/sprite/inline-*.svg", ["sprite", "html", "reload"]); // отслеживание изменений файлов sprite svg
+});
+
+gulp.task("reload", function() { // задача - вызывается как скрипт из package.json
+  server.reload();
 });
 
 gulp.task ("serve", function(done) { //задача - вызывается как скрипт из package.json
