@@ -1,5 +1,40 @@
 .slider {
-  min-height: 518px;
-
   background-color: $cyan;
+}
+
+.slider__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 1920px;
+  margin: 0 auto;
+}
+
+.slider__btn-prev,
+.slider__btn-next {
+  width: 78px;
+  height: 78px;
+  color: #000000;
+
+  border: 0;
+
+  background-color: #eefdf0;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.slider__btn-prev svg {
+  transform: rotate(-180deg);
+}
+
+.slider__slide {
+
 }

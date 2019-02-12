@@ -1,23 +1,29 @@
-.head {
-
-}
-
 .btn {
+  display: block;
+
+  background-color: #000000;
+  color: #ffffff;
+
+  text-decoration: none;
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 24px;
+
+  width: 126px;
+
+  padding: 13px;
 
   &:hover {
-
+    opacity: 0.8;
   }
 
   &:active {
-
+    opacity: 0.6;
   }
 }
 
 @media (min-width: $width-tablet) {
-  .head {
-
-  }
-
   .btn {
 
   }
@@ -25,10 +31,6 @@
 
 
 @media (min-width: $width-desktop) {
-  .head {
-
-  }
-
   .btn {
 
   }
