@@ -39,20 +39,20 @@
 .slide__item--1 {
 
   &:after {
-    width: 246px;
-    height: 605px;
+    width: 230px;
+    height: 606px;
 
-    background-image: url("../img/female_1.png");
+    background-image: url("../img/female_3.png");
   }
 }
 
 .slide__item--2 {
 
   &:after {
-    width: 230px;
-    height: 606px;
+    width: 246px;
+    height: 605px;
 
-    background-image: url("../img/female_3.png");
+    background-image: url("../img/female_1.png");
   }
 }
 
@@ -105,15 +105,10 @@
 .slide__selector {
   display: flex;
   flex-direction: column;
-
 }
 
 .slide__radio {
   display: none;
-
-  &:checked + .slide__radiolabel {
-    background-color: transparent;
-  }
 }
 
 .slide__radiolabel {
