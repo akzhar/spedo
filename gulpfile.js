@@ -139,19 +139,23 @@ gulp.task("html", function () { // задача - вызывается как с
 gulp.task("watch", function() { // задача - вызывается как скрипт из package.json
   // gulp.watch("docs/**/*.*", server.reload); // отслеживание изменений файлов scss
 
-  gulp.watch("src/blocks/**/*.{scss,sass}", ["style", "reload"]); // отслеживание изменений файлов scss
+  setTimeout(function(){gulp.watch("src/blocks/**/*.{scss,sass}", ["style", "reload"])},500); // отслеживание изменений файлов scss
 
-  gulp.watch("src/js/**/*.js", ["js" , "reload"]); // отслеживание изменений файлов js
+  setTimeout(function(){gulp.watch("src/js/**/*.js", ["js" , "reload"])},500); // отслеживание изменений файлов js
 
-  gulp.watch("src/blocks/**/*.html", ["html", "reload"]); // отслеживание изменений файлов html
+  setTimeout(function(){gulp.watch("src/blocks/**/*.html", ["html", "reload"])},500); // отслеживание изменений файлов html
 
-  gulp.watch("src/img/*.*", ["image", "reload"]); // отслеживание изменений файлов img
-  gulp.watch("src/img/sprite/inline-*.svg", ["sprite", "html", "reload"]); // отслеживание изменений файлов sprite svg
+  setTimeout(function(){gulp.watch("src/img/*.*", ["image", "reload"])},500); // отслеживание изменений файлов img
+  setTimeout(function(){gulp.watch("src/img/sprite/inline-*.svg", ["sprite", "html", "reload"])},500); // отслеживание изменений файлов sprite svg
 });
 
 gulp.task("reload", function() { // задача - вызывается как скрипт из package.json
-  server.reload();
+  server.reload(); //обновление браузера - скрол уедет наверх
 });
+
+// gulp.task("stream", function() { // задача - вызывается как скрипт из package.json
+//   server.stream(); //обновление браузера - скрол останется там где был
+// });
 
 gulp.task ("serve", function(done) { //задача - вызывается как скрипт из package.json
   server.init({ // перед запуском start запускается рад задач, затем запускается локальный сервер

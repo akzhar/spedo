@@ -1,5 +1,8 @@
 .site-menu-list {
   display: flex;
+  flex-wrap: wrap;
+
+  max-width: 800px;
 
   font-size: $s_2;
   line-height: $l_2;
@@ -13,22 +16,38 @@
 .site-menu-list__item {
   position: relative;
 
-  margin-right: 65px;
+  margin-right: 60px;
 
-  &:before {
-    position: absolute;
-    content: "";
-
-    top: 50%;
-    left: -30px;
-
-    width: 14px;
-    height: 14px;
-
-    transform: translate(0, -50%);
-
-    background-color: $red;
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
   }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.site-menu-list__icon,
+.site-menu-list__arrow {
+  position: absolute;
+  content: "";
+
+  top: 50%;
+
+  fill: #ffffff;
+}
+
+.site-menu-list__icon {
+  left: 0;
+
+  transform: translate(0, -50%);
+}
+
+.site-menu-list__arrow {
+  right: 0;
+
+  transform: translate(0, -50%) rotate(90deg);
 }
 
 .site-menu-list__item:first-child {
@@ -37,16 +56,26 @@
 
 .site-menu-list__link {
   display: block;
-  padding: 36px 0;
+  padding: 36px 20px 36px 0;
 
   color: #ffffff;
   text-decoration: none;
+}
 
-  &:hover {
-    opacity: 0.8;
-  }
+//нет стрелки справа
+.site-menu-list__item--track .site-menu-list__link,
+.site-menu-list__item--location .site-menu-list__link {
+  padding-right: 0;
+}
 
-  &:active {
-    opacity: 0.6;
-  }
+//более большие иконки
+.site-menu-list__item--language .site-menu-list__link,
+.site-menu-list__item--track .site-menu-list__link {
+  padding-left: 40px;
+}
+
+//меньшее иконки
+.site-menu-list__item--currency .site-menu-list__link,
+.site-menu-list__item--location .site-menu-list__link {
+  padding-left: 30px;
 }

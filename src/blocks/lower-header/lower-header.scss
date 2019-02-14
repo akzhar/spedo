@@ -1,13 +1,16 @@
 .lower-header {
   width: 1170px;
 
-  margin: 100px auto 0 auto;
+  margin: 90px auto 0 auto;
 }
 
-.lower-header__logo {
-  margin-bottom: 100px;
+.lower-header .logo {
+  width: 200px;
+
+  padding: 10px 0;
+  margin: 0 auto 100px auto;
 }
 
-.lower-header__nav {
+.lower-header .nav {
   margin-bottom: 100px;
 }

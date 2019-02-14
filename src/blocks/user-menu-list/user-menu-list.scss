@@ -1,5 +1,8 @@
 .user-menu-list {
   display: flex;
+  flex-wrap: wrap;
+
+  max-width: 270px;
 
   font-size: $s_2;
   line-height: $l_2;
@@ -12,6 +15,15 @@
 
 .user-menu-list__item {
   margin-right: 25px;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .user-menu-list__item:nth-last-child(2) {
@@ -29,6 +41,7 @@
 
     color: #ffffff;
     text-align: center;
+    line-height: 16px;
 
     top: 20px;
     right: -10px;
@@ -49,20 +62,12 @@
 
   color: #ffffff;
   text-decoration: none;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
 }
 
 .user-menu-list__link--cart {
-  padding: 32px 0;
+  padding: 34px 0;
 }
 
-.user-menu-list__link--cart svg {
+.user-menu-list__icon {
   fill: #ffffff;
 }

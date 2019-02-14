@@ -1,0 +1,48 @@
+.design {
+  padding: 200px 0 180px 390px;
+
+  font-size: 30px;
+  line-height: 18px;
+
+  background: url("../img/model_11.png") no-repeat right top;
+}
+
+.design__wrapper {
+  width: 540px;
+}
+
+.design__price {
+  font-size: 18px;
+}
+
+.design__header {
+  margin: 20px 0;
+
+  line-height: 45px;
+}
+
+.design__link {
+  position: relative;
+
+  color: #666666;
+  font-size: 18px;
+  text-decoration: none;
+
+  &:after {
+    position: absolute;
+    content: ">";
+
+    top: 50%;
+    right: -18px;
+
+    transform: translate(0, -50%);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

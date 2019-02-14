@@ -1,8 +1,8 @@
-.nav-list {
+.docs-list {
   display: flex;
   flex-wrap: wrap;
 
-  max-width: 700px;
+  max-width: 520px;
 
   margin: 0;
   padding: 0;
@@ -10,13 +10,17 @@
   list-style: none;
 }
 
-.nav-list__item {
-  margin-right: 50px;
+.docs-list__item {
+  margin-right: 30px;
 }
 
-.nav-list__link {
+.docs-list__item--search {
+  font-weight: 600;
+}
+
+.docs-list__link {
   text-decoration: none;
-  color: #000000;
+  color: #6e6e6e;
 
   &:hover {
     opacity: 0.8;

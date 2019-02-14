@@ -1,3 +1,11 @@
+.page-wrapper {
+  width: 1920px;
+
+  margin: 0 auto;
+
+  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
+}
+
 .btn {
   display: block;
 
@@ -20,18 +28,5 @@
 
   &:active {
     opacity: 0.6;
-  }
-}
-
-@media (min-width: $width-tablet) {
-  .btn {
-
-  }
-}
-
-
-@media (min-width: $width-desktop) {
-  .btn {
-
   }
 }

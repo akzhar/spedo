@@ -1,0 +1,39 @@
+.submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 1125px;
+
+  margin: 0 auto;
+  padding: 100px 0;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  border-bottom: 1px solid #dddddd;
+}
+
+.submit__phrase {
+
+}
+
+.submit__wrapper {
+  display: flex;
+}
+
+.submit__input {
+  width: 230px;
+
+  padding: 25px;
+
+  border: 1px solid #000000;
+
+  color: #6e6e6e;
+  text-transform: uppercase;
+}
+
+.submit__btn {
+  border: none;
+  text-transform: uppercase;
+}
