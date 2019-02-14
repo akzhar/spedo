@@ -11,12 +11,14 @@
 }
 
 .nav-list__item {
+  position: relative;
+
   margin-right: 50px;
 }
 
 .nav-list__link {
   text-decoration: none;
-  color: #000000;
+  color: #6e6e6e;
 
   &:hover {
     opacity: 0.8;
@@ -25,4 +27,25 @@
   &:active {
     opacity: 0.6;
   }
+}
+
+.nav-list__item:first-child .nav-list__link {
+  color: #000000;
+  font-weight: 600;
+}
+
+.nav-list__arrow {
+  position: absolute;
+  content: "";
+
+  top: 50%;
+  right: -18px;
+
+  fill: #6e6e6e;
+
+  transform: translate(0, -50%) rotate(90deg);
+}
+
+.nav-list__item:first-child .nav-list__link .nav-list__arrow {
+  fill: #000000;
 }
