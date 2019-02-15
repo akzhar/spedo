@@ -179,7 +179,7 @@ template {
   max-width: 800px;
   font-size: 12px;
   line-height: 24px;
-  margin: 0;
+  margin: 0 0 0 60px;
   padding: 0;
   list-style: none; }
 
@@ -211,9 +211,6 @@ template {
   right: 0;
   -webkit-transform: translate(0, -50%) rotate(90deg);
           transform: translate(0, -50%) rotate(90deg); }
-
-.site-menu-list__item:first-child {
-  margin-left: 60px; }
 
 .site-menu-list__link {
   display: block;
@@ -399,11 +396,12 @@ template {
           transform: rotate(-180deg); }
 
 .slide {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 1170px;
-  height: 518px; }
+  min-height: 520px; }
 
 .slide__list {
   margin: 0;
@@ -413,13 +411,12 @@ template {
   list-style: none; }
 
 .slide__item {
-  display: none;
-  position: relative; }
+  display: none; }
   .slide__item:after {
     position: absolute;
     content: "";
     bottom: 0;
-    left: 550px; }
+    left: 660px; }
 
 .slide__item--show {
   display: block;
@@ -457,7 +454,8 @@ template {
   margin: 0 0 40px 0; }
 
 .slide__btn {
-  position: relative; }
+  position: relative;
+  margin-bottom: 50px; }
   .slide__btn:after {
     position: absolute;
     content: ">";
@@ -697,7 +695,7 @@ template {
 .goods__colors li {
   width: 15px;
   height: 15px;
-  margin-right: 10px;
+  margin: 0 10px 10px 0;
   border-radius: 50%; }
 
 .goods__color--red {
@@ -749,6 +747,7 @@ template {
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   width: 1140px;
   margin: 0 auto;
   padding: 350px 0 0 0;
@@ -764,7 +763,11 @@ template {
     background-image: url("../img/model_12.png"); }
 
 .stock__wrapper {
-  width: 480px; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 480px;
+  min-height: 710px; }
 
 .stock__header {
   width: 380px;
@@ -773,7 +776,7 @@ template {
   line-height: 45px; }
 
 .stock__text {
-  margin: 0 0 200px 0;
+  margin: 0 0 50px 0;
   color: #666666;
   text-transform: none; }
 
@@ -826,8 +829,12 @@ template {
   margin: 0 auto;
   padding: 100px 0; }
 
+.footer .logo {
+  margin-right: 50px; }
+
 .footer .nav-list {
-  max-width: 520px; }
+  max-width: 520px;
+  margin-right: 50px; }
 
 .footer .nav-list__item {
   margin-right: 30px; }
