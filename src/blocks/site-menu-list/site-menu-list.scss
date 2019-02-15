@@ -28,6 +28,10 @@
   }
 }
 
+.site-menu-list__item:last-child {
+  margin-right: 0;
+}
+
 .site-menu-list__icon,
 .site-menu-list__arrow {
   position: absolute;

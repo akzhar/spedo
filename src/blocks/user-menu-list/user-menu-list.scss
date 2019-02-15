@@ -26,6 +26,10 @@
   }
 }
 
+.site-menu-list__item:last-child {
+  margin-right: 0;
+}
+
 .user-menu-list__item:nth-last-child(2) {
   margin-right: 88px;
 }

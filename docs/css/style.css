@@ -147,12 +147,13 @@ template {
   width: 126px;
   padding: 13px; }
   .btn:hover {
+    cursor: pointer;
     opacity: 0.8; }
   .btn:active {
     opacity: 0.6; }
 
 .body {
-  font-family: "Georgia", Times New Roman, serif;
+  font-family: Georgia, Times, serif;
   font-size: 16px;
   line-height: 30px;
   text-transform: uppercase;
@@ -190,6 +191,9 @@ template {
     cursor: pointer; }
   .site-menu-list__item:active {
     opacity: 0.6; }
+
+.site-menu-list__item:last-child {
+  margin-right: 0; }
 
 .site-menu-list__icon,
 .site-menu-list__arrow {
@@ -246,6 +250,9 @@ template {
     cursor: pointer; }
   .user-menu-list__item:active {
     opacity: 0.6; }
+
+.site-menu-list__item:last-child {
+  margin-right: 0; }
 
 .user-menu-list__item:nth-last-child(2) {
   margin-right: 88px; }
@@ -322,6 +329,9 @@ template {
   position: relative;
   margin-right: 50px; }
 
+.nav-list__item:last-child {
+  margin-right: 0; }
+
 .nav-list__link {
   text-decoration: none;
   color: #6e6e6e; }
@@ -360,7 +370,7 @@ template {
     opacity: 0.6; }
 
 .search__input {
-  padding: 0 10px;
+  padding: 0 15px;
   border: none; }
 
 .slider {
@@ -537,7 +547,7 @@ template {
 
 .promo__link {
   position: relative;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 24px;
   color: #696969;
   text-decoration: none; }
@@ -580,9 +590,7 @@ template {
   list-style: none; }
 
 .goods__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  position: relative;
   width: 360px;
   height: 450px;
   margin: 0 35px 50px 0;
@@ -601,12 +609,15 @@ template {
 
 .goods__popup {
   display: none;
-  padding: 68px 0;
+  padding: 67px 0;
   background-color: rgba(0, 204, 204, 0.24); }
 
 .goods__cart-btn,
 .goods__show-btn {
-  margin: 0 auto 10px auto; }
+  margin: 0 auto; }
+
+.goods__cart-btn {
+  margin-bottom: 10px; }
 
 .goods__show-btn {
   background-color: #ffffff;
@@ -638,18 +649,21 @@ template {
   background-position: 40% top; }
 
 .goods__info-block {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
   width: 300px;
   margin: 0;
   padding: 15px 30px;
   background-color: #ffffff;
-  color: #6e6e6e;
-  font-size: 14px;
-  line-height: 18px;
   list-style: none; }
 
 .goods__info-row {
   display: none;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  color: #6e6e6e;
+  font-size: 14px;
+  line-height: 18px; }
 
 .goods__info-row:first-child {
   display: flex;
@@ -660,7 +674,9 @@ template {
 
 .goods__head {
   margin: 0 0 6px 0;
-  color: #000000; }
+  color: #000000;
+  font-size: 18px;
+  line-height: 24px; }
 
 .goods__price {
   margin: 0;
@@ -703,7 +719,7 @@ template {
   background: url("../img/model_11.png") no-repeat right top; }
 
 .design__wrapper {
-  width: 540px; }
+  width: 560px; }
 
 .design__price {
   font-size: 18px; }
@@ -751,24 +767,24 @@ template {
   width: 480px; }
 
 .stock__header {
-  width: 350px;
+  width: 380px;
   margin: 0 0 50px 0;
   font-size: 30px;
   line-height: 45px; }
 
 .stock__text {
-  margin: 0 0 150px 0;
+  margin: 0 0 200px 0;
   color: #666666;
   text-transform: none; }
 
 .stock__btn {
   position: relative;
-  margin-bottom: 56px; }
+  width: 160px; }
   .stock__btn:after {
     position: absolute;
     content: ">";
     top: 50%;
-    right: 10px;
+    right: 18px;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%); }
 
@@ -793,7 +809,7 @@ template {
 
 .submit__input {
   width: 230px;
-  padding: 25px;
+  padding: 16px;
   border: 1px solid #000000;
   color: #6e6e6e;
   text-transform: uppercase; }

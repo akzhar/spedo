@@ -31,7 +31,7 @@
 }
 
 .stock__header {
-  width: 350px;
+  width: 380px;
 
   margin: 0 0 50px 0;
 
@@ -40,7 +40,7 @@
 }
 
 .stock__text {
-  margin: 0 0 150px 0;
+  margin: 0 0 200px 0;
 
   color: #666666;
   text-transform: none;
@@ -49,14 +49,14 @@
 .stock__btn {
   position: relative;
 
-  margin-bottom: 56px;
+  width: 160px;
 
   &:after {
     position: absolute;
     content: ">";
 
     top: 50%;
-    right: 10px;
+    right: 18px;
 
     transform: translate(0, -50%);
   }
