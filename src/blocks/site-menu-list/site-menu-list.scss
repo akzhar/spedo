@@ -7,25 +7,22 @@
   font-size: $s_2;
   line-height: $l_2;
 
-  margin: 0 0 0 60px;
+  margin: 0;
   padding: 0;
 
   list-style: none;
+
+  z-index: 2; // для arrow на select
 }
 
 .site-menu-list__item {
+  display: flex;
+  align-items: center;
+
   position: relative;
 
   margin-right: 60px;
-
-  &:hover {
-    opacity: 0.8;
-    cursor: pointer;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
+  padding: 36px 0;
 }
 
 .site-menu-list__item:last-child {
@@ -52,30 +49,63 @@
   right: 0;
 
   transform: translate(0, -50%) rotate(90deg);
+
+  z-index: -1; // для arrow на select
 }
 
 .site-menu-list__link {
   display: block;
-  padding: 36px 20px 36px 0;
 
   color: #ffffff;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
-//нет стрелки справа
-.site-menu-list__item--track .site-menu-list__link,
-.site-menu-list__item--location .site-menu-list__link {
-  padding-right: 0;
+.site-menu-list__item select {
+  background-color: transparent; // для arrow на select
+  border: none;
+
+  color: #ffffff;
+  text-transform: uppercase;
+
+  appearance: none; // убрать arrow на select для ie
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.site-menu-list__item select::-ms-expand {
+  display: none; // убрать arrow на select для ie
+}
+
+.site-menu-list__item--language select {
+  min-width: 90px;
+}
+
+.site-menu-list__item--currency select {
+  min-width: 60px;
+}
+
+.site-menu-list__link--wrapper option {
+  color: #000000;
 }
 
 //более большие иконки
-.site-menu-list__item--language .site-menu-list__link,
-.site-menu-list__item--track .site-menu-list__link {
+.site-menu-list__item--language,
+.site-menu-list__item--track {
   padding-left: 40px;
 }
 
 //меньшее иконки
-.site-menu-list__item--currency .site-menu-list__link,
-.site-menu-list__item--location .site-menu-list__link {
+.site-menu-list__item--currency,
+.site-menu-list__item--location {
   padding-left: 30px;
 }

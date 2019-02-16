@@ -15,29 +15,17 @@
 
 .user-menu-list__item {
   margin-right: 25px;
-
-  &:hover {
-    opacity: 0.8;
-    cursor: pointer;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-}
-
-.site-menu-list__item:last-child {
-  margin-right: 0;
-}
-
-.user-menu-list__item:nth-last-child(2) {
-  margin-right: 88px;
+  padding: 36px 0;
 }
 
 .user-menu-list__item:last-child {
+  margin-right: 0;
+}
+
+.user-menu-list__item--cart {
   position: relative;
 
-  margin-right: 44px;
+  margin-left: 80px;
 
   &:after {
     position: absolute;
@@ -62,14 +50,16 @@
 .user-menu-list__link {
   display: block;
 
-  padding: 36px 0;
-
   color: #ffffff;
   text-decoration: none;
-}
 
-.user-menu-list__link--cart {
-  padding: 34px 0;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .user-menu-list__icon {

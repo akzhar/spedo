@@ -5,18 +5,20 @@
 }
 
 .search__btn {
-  border: none;
+ border: none;
 
-  background: url("../img/search.svg") no-repeat transparent center center;
+ padding: 0 6px;
 
-  &:hover {
-    cursor: pointer;
-    opacity: 0.8;
-  }
+ background: url("../img/search.svg") no-repeat transparent center center;
 
-  &:active {
-    opacity: 0.6;
-  }
+ &:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+&:active {
+  opacity: 0.6;
+}
 }
 
 .search__input {

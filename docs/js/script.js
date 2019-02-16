@@ -43,3 +43,16 @@ function goToSlide(n) {
   label[currentSlide].style.backgroundColor="transparent"; //установка атрибута у текущей радио радио кнопки
   slides[currentSlide].classList.add("slide__item--show"); //назначаем класс текущему слайду
 };
+
+
+var selectLanguage = document.getElementById("selectLanguage");
+var selectCurrency = document.getElementById("selectCurrency");
+
+selectLanguage.addEventListener("change", function(){
+  document.getElementById("iconLanguage").setAttribute("src","img/"+this.value+".svg");
+});
+
+selectCurrency.addEventListener("change", function(){
+  document.getElementById("iconCurrency").setAttribute("src","img/"+this.value+".svg");
+});
+
